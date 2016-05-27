@@ -15,32 +15,6 @@ function toPoco(entity) {
     };
 }
 
-exports.regAdopter = function(req, res){
-    var email = req.body.email;
-    User.findOne({ email: email }, function (err, user) {
-        if (err) {
-            res.status(500).send(err);
-            return;
-        }
-
-        if (user) {
-            res.redirect(req.query.redirect);
-        } else{
-            user = new User();
-            user.email = email;
-
-            user.save(function(err, result){
-                if (err) {
-                    res.status(500).send(err);
-                    return;
-                }
-
-                res.redirect(req.query.redirect);
-            });
-        }
-    });
-};
-
 exports.get = function(req, res) {
     User.findById(req.params.id, function(err, user){
         if (err) {

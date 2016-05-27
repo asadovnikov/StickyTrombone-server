@@ -17,7 +17,4 @@ exports.init = function (router) {
 
     router.route('/user/:id')
         .get(user.get);
-
-    router.route('/early/adopter/register*')
-        .post(user.regAdopter);
 };

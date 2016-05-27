@@ -1,1 +1,0 @@
-mongoimport -d events -c events --jsonArray locations.json
