@@ -1,0 +1,21 @@
+[
+  '{{repeat(50, 70)}}',
+  {
+    tenant: '54c758b2aff1a55940d466a3',
+    name: '{{lorem(3, "words")}}',
+    loc: ['{{floating(7, 10)}}', '{{floating(45, 55)}}'],
+    tags: [
+      '{{repeat(2)}}',
+      '{{random("software", "it", "mobile", "AngularJs", "games", "startup", "lean", "scrum")}}'
+    ],
+    description: '{{lorem(1, "paragraphs")}}',
+    address: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}',
+    start: '{{date(new Date(2014, 0, 1), new Date(), "yyyy-mm-ddTHH:MM:ssPP")}}',
+    picture: 'http://lorempixel.com/500/500/technics/',
+    achievements: [
+      '{{repeat(1, 3)}}',
+        '{{random("ninja", "nerd", "pioneer", "old school", "hipster", "dummy")}}'
+    ],
+    cookies: '{{integer(1,10)}}'
+  }
+]

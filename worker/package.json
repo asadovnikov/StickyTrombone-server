@@ -1,0 +1,39 @@
+{
+  "name": "eventonizer-worker",
+  "version": "0.0.0",
+  "description": "Eventonizer Worker",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Matrix42AG/eventonizer-server.git"
+  },
+  "dependencies": {
+    "amqplib": "^0.2.1",
+    "body-parser": "^1.5.0",
+    "compression": "^1.2.0",
+    "cookie-session": "^1.0.2",
+    "express": "^4.9.7",
+    "foreman": "^0.4.2",
+    "jackrabbit": "^2.3.0",
+    "jade": "^1.5.0",
+    "lodash": "^2.4.1",
+    "logfmt": "^1.1.2",
+    "mongoose": "^3.8.13",
+    "mongoose-cache": "git://github.com/hunterloftis/mongoose-cache",
+    "mongoose-timestamp": "^0.3.0",
+    "morgan": "^1.2.0",
+    "node-uuid": "^1.4.1",
+    "promise": "^5.0.0",
+    "serve-favicon": "~2.0.1",
+    "summarize": "^1.5.0",
+    "superagent": "^0.18.2",
+    "throng": "^1.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.11.x"
+  }
+}
