@@ -1,8 +1,8 @@
 'use strict';
 
-var event  = require('../modules/event');
+var post  = require('../modules/post');
 
 exports.init = function (router) {
     router.route('/image/:id')
-        .get(event.getPictureData);
+        .get(post.getPictureData);
 };

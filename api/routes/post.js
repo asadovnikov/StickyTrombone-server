@@ -1,6 +1,6 @@
 'use strict';
 
-var event  = require('../modules/post');
+var post  = require('../modules/post');
 
 exports.init = function (router) {
     // GET :id

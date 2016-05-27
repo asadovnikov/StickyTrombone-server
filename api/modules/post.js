@@ -71,13 +71,13 @@ exports.create = function(req, res) {
 };
 
 exports.update = function(req, res) {
-    Post.findById(req.params.id, function(err, event){
+    Post.findById(req.params.id, function(err, post){
         if (err) {
             res.status(500).send(err);
             return;
         }
 
-        if (!event){
+        if (!post){
             res.send(404, "Post not found.");
             return;
         }
@@ -100,9 +100,9 @@ exports.update = function(req, res) {
                 }
 
                 var picUrl = '/image/'+result.id;
-                event.picture = picUrl;
+                post.picture = picUrl;
 
-                event.save(function (err, result) {
+                post.save(function (err, result) {
                     if (err) {
                         res.status(500).send(err);
                         return;
@@ -112,7 +112,7 @@ exports.update = function(req, res) {
                 });
             });
         } else {
-            event.save(function (err, result) {
+            post.save(function (err, result) {
                 if (err) {
                     res.status(500).send(err);
                     return;
